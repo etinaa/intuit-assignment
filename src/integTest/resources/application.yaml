@@ -1,0 +1,9 @@
+spring:
+  application.name: intuit-assignment
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url:
+    username:
+    password:
+  liquibase:
+    change-log: classpath:db/changelog-master.xml

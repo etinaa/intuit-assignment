@@ -1,0 +1,17 @@
+spring:
+  application.name: intuit-assignment
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/intuit_assignment
+    username: admin
+    password: admin
+  liquibase:
+    change-log: classpath:db/changelog-master.xml
+
+management:
+  endpoint:
+    health.show-details: "ALWAYS"
+  endpoints.web:
+    exposure.include: health, info, prometheus
+
+springdoc.show-actuator: true

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+            https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="2024.02.20.15.00" author="Andrei Etin">
+        <createTable tableName="players" remarks="Players list">
+            <column name="player_id" type="varchar(9)" remarks="Unique ID">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="retro_id" type="varchar(8)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="bbref_id" type="varchar(9)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="first_name" type="varchar(100)" remarks="First name" />
+            <column name="last_name" type="varchar(100)" remarks="Last name">
+                <constraints nullable="false"/>
+            </column>
+            <column name="given_name" type="varchar(100)" remarks="Given name" />
+            <column name="weight" type="number(3)" remarks="Weight" />
+            <column name="height" type="number(3)" remarks="Height" />
+            <column name="bats" type="varchar(1)" remarks="Batting side" />
+            <column name="throwh" type="varchar(1)" remarks="Throwing hand" />
+            <column name="debut" type="date" remarks="Debut game date" />
+            <column name="final_game" type="date" remarks="Final game date" />
+            <column name="birth_year" type="number(4)" remarks="Year of birth" />
+            <column name="birth_month" type="number(2)" remarks="Month of birth" />
+            <column name="birth_day" type="number(2)" remarks="Day of birth" />
+            <column name="birth_country" type="varchar(100)" remarks="Country of birth" />
+            <column name="birth_state" type="varchar(100)" remarks="State of birth" />
+            <column name="birth_city" type="varchar(100)" remarks="City of birth" />
+            <column name="death_year" type="number(4)" remarks="Year of death" />
+            <column name="death_month" type="number(2)" remarks="Month of death" />
+            <column name="death_day" type="number(2)" remarks="Day of death" />
+            <column name="death_country" type="varchar(100)" remarks="Country of death" />
+            <column name="death_state" type="varchar(100)" remarks="State of death" />
+            <column name="death_city" type="varchar(100)" remarks="City of death" />
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
